@@ -1,0 +1,79 @@
+snippet ac "abstract class" b
+<?php
+namespace ${1:vendor};
+
+abstract class `!p snip.rv=snip.basename`
+{
+	$0
+}
+endsnippet
+
+snippet aci "abstract class implements" b
+<?php
+namespace ${1:vendor};
+
+abstract class `!p snip.rv=snip.basename` implements ${2:ArrayAccess}
+{
+	$0
+}
+endsnippet
+
+snippet ac "abstract class extends" b
+<?php
+namespace ${1:vendor};
+
+abstract class `!p snip.rv=snip.basename` extends ${2:RuntimeException}
+{
+	$0
+}
+endsnippet
+
+snippet acei "abstract class extends implements" b
+<?php
+namespace ${1:vendor};
+
+abstract class `!p snip.rv=snip.basename` extends ${2:RuntimeException} implements ${3:ArrayAccess}
+{
+	$0
+}
+endsnippet
+
+snippet ce "class extends" b
+<?php
+namespace ${1:vendor};
+
+class `!p snip.rv=snip.basename` extends ${2:RuntimeException}
+{
+	$0
+}
+endsnippet
+
+snippet cei "class extends implements" b
+<?php
+namespace ${1:vendor};
+
+class `!p snip.rv=snip.basename` extends ${2:RuntimeException} implements ${3:ArrayAccess}
+{
+	$0
+}
+endsnippet
+
+snippet ci "class implements" b
+<?php
+namespace ${1:vendor};
+
+class `!p snip.rv=snip.basename` implements ${2:ArrayAccess}
+{
+	$0
+}
+endsnippet
+
+snippet cl "class" b
+<?php
+namespace ${1:vendor};
+
+class `!p snip.rv=snip.basename`
+{
+	$0
+}
+endsnippet
