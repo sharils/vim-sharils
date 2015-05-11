@@ -1,0 +1,13 @@
+priority -50
+
+snippet /\$/ "place holder" r
+${${1:1}:${2:ph}}
+endsnippet
+
+snippet s "Snippet definition" w
+`!p snip.rv = "snippet"` ${1:Tab_trigger} "${2:Description}" w
+$0
+`!p snip.rv = "endsnippet"`
+endsnippet
+
+# vim:ft=snippets:
