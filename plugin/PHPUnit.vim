@@ -1,9 +1,17 @@
-nmap <LEADER>pu :call PHPUnit()<CR>
+nmap <LEADER>puc :call PHPUnitClass()<CR>
+nmap <LEADER>pum :call PHPUnitMethod()<CR>
 
-function PHPUnit()
+function PHPUnitClass()
+	update
+	execute '!phpunit -c tests/phpunit.xml --filter %:t:r'
+endfunction
+
+function PHPUnitMethod()
 	update
 	mark m
 	?\v(function )@<=
+	execute 'normal N'
+	execute 'normal ye'
 	execute 'normal `m'
-	!phpunit -c tests/phpunit.xml --filter %:t:r::testCreateDomainWithRebrand
+	execute '!phpunit -c tests/phpunit.xml --filter %:t:r::' . @"
 endfunction
