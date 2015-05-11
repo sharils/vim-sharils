@@ -77,3 +77,23 @@ class `!p snip.rv=snip.basename`
 	$0
 }
 endsnippet
+
+snippet ie "interface extends" b
+<?php
+namespace ${1:vendor};
+
+interface `!p snip.rv=snip.basename` extends ${2:ArrayAccess}
+{
+	$0
+}
+endsnippet
+
+snippet in "interface" b
+<?php
+namespace ${1:vendor};
+
+interface `!p snip.rv=snip.basename`
+{
+	$0
+}
+endsnippet
