@@ -1,3 +1,7 @@
+snippet ab "abstract" w
+abstract $0
+endsnippet
+
 snippet ac "abstract class" b
 <?php
 namespace ${1:vendor};
@@ -78,6 +82,10 @@ class `!p snip.rv=snip.basename`
 }
 endsnippet
 
+snippet /ex/ "extends" r
+ extends $0
+endsnippet
+
 snippet ie "interface extends" b
 <?php
 namespace ${1:vendor};
@@ -86,6 +94,10 @@ interface `!p snip.rv=snip.basename` extends ${2:ArrayAccess}
 {
 	$0
 }
+endsnippet
+
+snippet /im/ "implements" r
+ implements $0
 endsnippet
 
 snippet in "interface" b
