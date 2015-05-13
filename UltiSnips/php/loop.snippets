@@ -4,27 +4,27 @@ def singular(word):
 	return re.sub(r'(s|es)$', '', word)
 endglobal
 
-snippet ,fe "foreach" b
+snippet ,fe "foreach:" b
 <?php foreach ($${1:items} as $`!p snip.rv = singular(t[1])`): ?>
 <?php endforeach ?>
 endsnippet
 
-snippet ,fei "foreach index" b
+snippet ,fei "foreach: index" b
 <?php foreach ($${1:items} as $`!p snip.rv = singular(t[1])`Idx => $`!p snip.rv = singular(t[1])`): ?>
 <?php endforeach ?>
 endsnippet
 
-snippet ,fek "foreach key" b
+snippet ,fek "foreach: key" b
 <?php foreach ($${1:map} as $$1Key => $$1Val): ?>
 <?php endforeach ?>
 endsnippet
 
-snippet ,for "for" b
+snippet ,for "for:" b
 <?php for (${1}; ${2}; ${3}): ?>
 <?php endfor ?>
 endsnippet
 
-snippet ,wh "while" b
+snippet ,wh "while:" b
 <?php while (${1:false}): ?>
 <?php endwhile ?>
 endsnippet
