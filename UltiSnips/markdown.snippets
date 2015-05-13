@@ -1,0 +1,84 @@
+snippet a "a" b
+[${1:example.com}](${2:http://example.com/})$0
+endsnippet
+
+snippet ai "a img" b
+[![${1:example.com}](${2:http://example.com/})]($2)$0
+endsnippet
+
+snippet ait "a>img[title]" b
+[![${1:example.com}](${2:http://example.com/} "${3:$1}")]($2)$0
+endsnippet
+
+snippet at "a[title]" b
+[${1:example.com}](${2:http://example.com/} "${3:$1}")$0
+endsnippet
+
+snippet co "code" b
+\`\` ${1:code} \`\`$0
+endsnippet
+
+snippet em "em" b
+*${1:em}*$0
+endsnippet
+
+snippet @ "email" b
+<${1:user}@${2:example.com}>$0
+endsnippet
+
+snippet h1 "h1" b
+${1:h1}
+`!p snip.rv = re.sub(r".", "=", t[1])`
+$0
+endsnippet
+
+snippet h2 "h2" b
+${1:h2}
+`!p snip.rv = re.sub(r".", "-", t[1])`
+$0
+endsnippet
+
+snippet h3 "h3" b
+### ${1:h3} ###
+$0
+endsnippet
+
+snippet h4 "h4" b
+#### ${1:h4} ####
+$0
+endsnippet
+
+snippet h5 "h5" b
+##### ${1:h5} #####
+$0
+endsnippet
+
+snippet h6 "h6" b
+###### ${1:h6} ######
+$0
+endsnippet
+
+snippet hr "hr" b
+--------------------------------------------------------------------------------
+$0
+endsnippet
+
+snippet hs "https" b
+<https://${1:example.com}/>$0
+endsnippet
+
+snippet ht "http" b
+<http://${1:example.com}/>$0
+endsnippet
+
+snippet im "image" b
+![${1:example.com}](${2:http://example.com/})$0
+endsnippet
+
+snippet it "image[title]" b
+![${1:example.com}](${2:http://example.com/} "${3:$1}")$0
+endsnippet
+
+snippet st "strong" b
+**${1:strong}**$0
+endsnippet
