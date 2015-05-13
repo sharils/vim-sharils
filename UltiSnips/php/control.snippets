@@ -1,0 +1,63 @@
+snippet ca "case" b
+case ${1:false}:
+endsnippet
+
+snippet cb "case break" b
+case ${1:false}:
+	break;
+endsnippet
+
+snippet cnb "case no break" b
+case ${1:false}:
+	// no break
+endsnippet
+
+snippet de "default" b
+default:
+	$0
+endsnippet
+
+snippet /(?<=})e/ "else" r
+ else {
+}
+endsnippet
+
+snippet /(?<=})ei/ "elseif" r
+ elseif (${1:false}) {
+}
+endsnippet
+
+snippet ib "if break" b
+if (${1:false}) {
+	break;
+}
+endsnippet
+
+snippet ic "if continue" b
+if (${1:false}) {
+	continue;
+}
+endsnippet
+
+snippet if "if" b
+if (${1:false}) {
+}
+endsnippet
+
+snippet pe "php else" b
+<?php else: ?>
+endsnippet
+
+snippet pei "php elseif" b
+<?php elseif (${1:false}): ?>
+endsnippet
+
+snippet pif "php if" b
+<?php if (${1:false}): ?>
+<?php endif ?>
+endsnippet
+
+snippet sw "switch" b
+switch (${1:false}) {
+}
+endsnippet
