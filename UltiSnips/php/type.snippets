@@ -1,0 +1,79 @@
+snippet em "empty" w
+empty($1)$0
+endsnippet
+
+snippet ia "is_array" w
+is_array($$1)$0
+endsnippet
+
+snippet ib "is_bool" w
+is_bool($$1)$0
+endsnippet
+
+snippet if "is_float" w
+is_float($$1)$0
+endsnippet
+
+snippet ii "is_int" w
+is_int($$1)$0
+endsnippet
+
+snippet in "is_numeric" w
+is_numeric($$1)$0
+endsnippet
+
+snippet io "is_object" w
+is_object($$1)$0
+endsnippet
+
+snippet iof "instanceof" w
+$$1 instanceof ${2:ArrayAccess}
+endsnippet
+
+snippet ir "is_resource" w
+is_resource($$1)$0
+endsnippet
+
+snippet irt "is resource type" w
+is_resource($$1) && get_resource_type($$1) === '$2'$0
+endsnippet
+
+snippet is "is_string" w
+is_string($$1)$0
+endsnippet
+
+snippet ist "isset" w
+isset($1)$0
+endsnippet
+
+snippet ne "not empty" w
+!empty($1)$0
+endsnippet
+
+snippet ta "to array" w
+(array) $0
+endsnippet
+
+snippet tb "to bool" w
+(bool) $0
+endsnippet
+
+snippet tf "to float" w
+(float) $0
+endsnippet
+
+snippet ti "to int" w
+(int) $0
+endsnippet
+
+snippet to "to object" w
+(object) $0
+endsnippet
+
+snippet ts "to string" w
+(string) $0
+endsnippet
+
+snippet tn "to null" w
+(unset) $0
+endsnippet
