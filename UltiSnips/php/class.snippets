@@ -1,3 +1,9 @@
+global !p
+import re
+def class_name(fqcn):
+	return re.sub(r'.*\\', '', fqcn)
+endglobal
+
 snippet ab "abstract" w
 abstract $0
 endsnippet
