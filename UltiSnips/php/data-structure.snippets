@@ -1,0 +1,21 @@
+snippet ar "array" w
+array($1)$0
+endsnippet
+
+snippet kv "key value" w
+'$1' => $$2,
+endsnippet
+
+snippet ne "new" w
+new ${1:ArrayAccess}($2)$0
+endsnippet
+
+snippet ns "new stdClass" w
+new stdClass()
+endsnippet
+
+snippet oa "object array" w
+(object) array(
+	$1
+)$0
+endsnippet
