@@ -10,7 +10,7 @@ snippet ai "assert int" w
 assert('is_int($$1)');$0
 endsnippet
 
-snippet ar "assert resource type" w
+snippet art "assert resource type" w
 assert('is_resource($$1) && get_resource_type($$1) === "$2"$1');$0
 endsnippet
 
@@ -30,7 +30,7 @@ snippet ami "assert maybe int" w
 assert('$${1} === null || is_int($$1)');$0
 endsnippet
 
-snippet amr "assert maybe resource type" w
+snippet amrt "assert maybe resource type" w
 assert('$${1} === null || is_resource($$1) && get_resource_type($$1) === "$2"$1');$0
 endsnippet
 
