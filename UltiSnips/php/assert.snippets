@@ -1,0 +1,39 @@
+snippet ab "assert bool" w
+assert('is_bool($$1)');$0
+endsnippet
+
+snippet ad "assert double" w
+assert('is_double($$1)');$0
+endsnippet
+
+snippet ai "assert int" w
+assert('is_int($$1)');$0
+endsnippet
+
+snippet ar "assert resource type" w
+assert('is_resource($$1) && get_resource_type($$1) === "$2"$1');$0
+endsnippet
+
+snippet as "assert string" w
+assert('is_string($$1)');$0
+endsnippet
+
+snippet amb "assert maybe bool" w
+assert('$${1} === null || is_bool($$1)');$0
+endsnippet
+
+snippet amd "assert maybe double" w
+assert('$${1} === null || is_double($$1)');$0
+endsnippet
+
+snippet ami "assert maybe int" w
+assert('$${1} === null || is_int($$1)');$0
+endsnippet
+
+snippet amr "assert maybe resource type" w
+assert('$${1} === null || is_resource($$1) && get_resource_type($$1) === "$2"$1');$0
+endsnippet
+
+snippet ams "assert maybe string" w
+assert('$${1} === null || is_string($$1)');$0
+endsnippet
