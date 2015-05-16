@@ -1,23 +1,23 @@
-snippet cm "Class::$property" w
+snippet cm "Class::method()" w
 ${1:stdClass}::${2}(${3})$0
 endsnippet
 
-snippet om "$object->property" w
+snippet om "$object->method()" w
 $${1:object}->${2}(${3})$0
 endsnippet
 
-snippet pm "parent::$property" w
+snippet pm "parent::method()" w
 parent::${1}(${2})$0
 endsnippet
 
-snippet sm "self::$property" w
+snippet sm "self::method()" w
 self::${1}(${2})$0
 endsnippet
 
-snippet stm "static::$property" w
+snippet stm "static::method()" w
 static::${1}(${2})$0
 endsnippet
 
-snippet tm "$this->property" w
+snippet tm "$this->method()" w
 $this->${1}(${2})$0
 endsnippet
