@@ -108,6 +108,54 @@ snippet /ex/ "extends" r
  extends $0
 endsnippet
 
+snippet fce "final class extends" b
+<?php
+namespace ${1:Vendor};
+
+use ${2:stdClass};
+
+final class `!p snip.rv=snip.basename` extends `!p snip.rv = class_name(t[2])`
+{
+	$0
+}
+endsnippet
+
+snippet fcei "final class extends implements" b
+<?php
+namespace ${1:Vendor};
+
+use ${2:stdClass};
+
+use ${3:IteratorAggregate};
+
+final class `!p snip.rv=snip.basename` extends `!p snip.rv = class_name(t[2])` implements `!p snip.rv = class_name(t[3])`
+{
+	$0
+}
+endsnippet
+
+snippet fci "final class implements" b
+<?php
+namespace ${1:Vendor};
+
+use ${2:IteratorAggregate};
+
+final class `!p snip.rv=snip.basename` implements `!p snip.rv = class_name(t[2])`
+{
+	$0
+}
+endsnippet
+
+snippet fcl "final class" b
+<?php
+namespace ${1:Vendor};
+
+final class `!p snip.rv=snip.basename`
+{
+	$0
+}
+endsnippet
+
 snippet ie "interface extends" b
 <?php
 namespace ${1:Vendor};
