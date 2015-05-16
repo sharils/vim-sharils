@@ -26,7 +26,7 @@ snippet ac "abstract class extends" b
 <?php
 namespace ${1:Vendor};
 
-abstract class `!p snip.rv=snip.basename` extends ${2:RuntimeException}
+abstract class `!p snip.rv=snip.basename` extends ${2:\stdClass}
 {
 	$0
 }
@@ -36,7 +36,7 @@ snippet acei "abstract class extends implements" b
 <?php
 namespace ${1:Vendor};
 
-abstract class `!p snip.rv=snip.basename` extends ${2:RuntimeException} implements ${3:\IteratorAggregate}
+abstract class `!p snip.rv=snip.basename` extends ${2:\stdClass} implements ${3:\IteratorAggregate}
 {
 	$0
 }
@@ -46,7 +46,7 @@ snippet ce "class extends" b
 <?php
 namespace ${1:Vendor};
 
-class `!p snip.rv=snip.basename` extends ${2:RuntimeException}
+class `!p snip.rv=snip.basename` extends ${2:\stdClass}
 {
 	$0
 }
@@ -56,7 +56,7 @@ snippet cei "class extends implements" b
 <?php
 namespace ${1:Vendor};
 
-class `!p snip.rv=snip.basename` extends ${2:RuntimeException} implements ${3:\IteratorAggregate}
+class `!p snip.rv=snip.basename` extends ${2:\stdClass} implements ${3:\IteratorAggregate}
 {
 	$0
 }
