@@ -1,0 +1,15 @@
+snippet vd "var_dump get_defined_vars debug_backtrace" w
+static $var_dump_counter = 0; ob_start(); var_dump(array(array_reverse(debug_backtrace()), get_defined_vars(), ${1:null}, $var_dump_counter++ . ' ' . date('g:i:s M j Y'))); echo preg_replace('/\=\>\n\s+/', ' => ', ob_get_clean());
+endsnippet
+
+snippet vde "var_dump get_defined_vars debug_backtrace" w
+static $var_dump_counter = 0; ob_start(); var_dump(array(array_reverse(debug_backtrace()), get_defined_vars(), ${1:null}, $var_dump_counter++ . ' ' . date('g:i:s M j Y'))); echo preg_replace('/\=\>\n\s+/', ' => ', ob_get_clean()); exit;
+endsnippet
+
+snippet vdr "var_dump get_defined_vars debug_backtrace" w
+static $var_dump_counter = 0; ob_start(); var_dump(array($var_dump_counter++ . ' ' . date('g:i:s M j Y'), ${1:null}, array_reverse(get_defined_vars()), debug_backtrace())); echo preg_replace('/\=\>\n\s+/', ' => ', ob_get_clean());
+endsnippet
+
+snippet vdre "var_dump get_defined_vars debug_backtrace" w
+static $var_dump_counter = 0; ob_start(); var_dump(array($var_dump_counter++ . ' ' . date('g:i:s M j Y'), ${1:null}, array_reverse(get_defined_vars()), debug_backtrace())); echo preg_replace('/\=\>\n\s+/', ' => ', ob_get_clean()); exit;
+endsnippet
