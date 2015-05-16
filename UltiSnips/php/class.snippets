@@ -22,7 +22,9 @@ snippet ace "abstract class extends" b
 <?php
 namespace ${1:Vendor};
 
-abstract class `!p snip.rv=snip.basename` extends ${2:\stdClass}
+use ${2:stdClass};
+
+abstract class `!p snip.rv=snip.basename` extends `!p snip.rv = class_name(t[2])`
 {
 	$0
 }
@@ -32,7 +34,11 @@ snippet acei "abstract class extends implements" b
 <?php
 namespace ${1:Vendor};
 
-abstract class `!p snip.rv=snip.basename` extends ${2:\stdClass} implements ${3:\IteratorAggregate}
+use ${2:stdClass};
+
+use ${3:IteratorAggregate};
+
+abstract class `!p snip.rv=snip.basename` extends `!p snip.rv = class_name(t[2])` implements `!p snip.rv = class_name(t[3])`
 {
 	$0
 }
@@ -42,7 +48,9 @@ snippet aci "abstract class implements" b
 <?php
 namespace ${1:Vendor};
 
-abstract class `!p snip.rv=snip.basename` implements ${2:\IteratorAggregate}
+use ${2:IteratorAggregate};
+
+abstract class `!p snip.rv=snip.basename` implements `!p snip.rv = class_name(t[2])`
 {
 	$0
 }
@@ -52,7 +60,9 @@ snippet ce "class extends" b
 <?php
 namespace ${1:Vendor};
 
-class `!p snip.rv=snip.basename` extends ${2:\stdClass}
+use ${2:stdClass};
+
+class `!p snip.rv=snip.basename` extends `!p snip.rv = class_name(t[2])`
 {
 	$0
 }
@@ -62,7 +72,11 @@ snippet cei "class extends implements" b
 <?php
 namespace ${1:Vendor};
 
-class `!p snip.rv=snip.basename` extends ${2:\stdClass} implements ${3:\IteratorAggregate}
+use ${2:stdClass};
+
+use ${3:IteratorAggregate};
+
+class `!p snip.rv=snip.basename` extends `!p snip.rv = class_name(t[2])` implements `!p snip.rv = class_name(t[3])`
 {
 	$0
 }
@@ -72,7 +86,9 @@ snippet ci "class implements" b
 <?php
 namespace ${1:Vendor};
 
-class `!p snip.rv=snip.basename` implements ${2:\IteratorAggregate}
+use ${2:IteratorAggregate};
+
+class `!p snip.rv=snip.basename` implements `!p snip.rv = class_name(t[2])`
 {
 	$0
 }
@@ -96,7 +112,9 @@ snippet ie "interface extends" b
 <?php
 namespace ${1:Vendor};
 
-interface `!p snip.rv=snip.basename` extends ${2:\IteratorAggregate}
+use ${2:IteratorAggregate};
+
+interface `!p snip.rv=snip.basename` extends `!p snip.rv = class_name(t[2])`
 {
 	$0
 }
