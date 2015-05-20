@@ -1,11 +1,10 @@
 nmap <C-P> :CtrlPLastMode<CR>
-nmap <LEADER>pM :CtrlPMixed<CR>
-nmap <LEADER>pT :CtrlPTag<CR>
-nmap <LEADER>pb :CtrlPBuffer<CR>
-nmap <LEADER>pf :CtrlP<CR>
-nmap <LEADER>pm :CtrlPMRU<CR>
-nmap <LEADER>pq :CtrlPQuickfix<CR>
-nmap <LEADER>pt :CtrlPBufTag<CR>
+nmap <LEADER>cb :CtrlPBuffer<CR>
+nmap <LEADER>cf :CtrlP<CR>
+nmap <LEADER>cm :CtrlPMixed<CR>
+nmap <LEADER>ct :CtrlPBufTag<CR>
+nmap <LEADER>cT :CtrlPTag<CR>
+nmap <LEADER>cu :CtrlPMRU<CR>
 
 let g:ctrlp_custom_ignore = {'dir': '\v(\.git|bower_components|node_modules|vendor)/'}
 let g:ctrlp_extensions = ['tag']
