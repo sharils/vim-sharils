@@ -1,9 +1,9 @@
-nmap <LEADER>puc :call PHPUnitClass()<CR>
-nmap <LEADER>pum :call PHPUnitMethod()<CR>
+nmap <LEADER>uc :call PHPUnitClass()<CR>
+nmap <LEADER>um :call PHPUnitMethod()<CR>
 
 function PHPUnitClass()
 	update
-	execute '!phpunit -c tests/phpunit.xml --filter %:t:r'
+	execute '!./vendor/bin/phpunit -c tests/phpunit.xml --filter %:t:r'
 endfunction
 
 function PHPUnitMethod()
@@ -13,5 +13,5 @@ function PHPUnitMethod()
 	execute 'normal N'
 	execute 'normal ye'
 	execute 'normal `m'
-	execute '!phpunit -c tests/phpunit.xml --filter %:t:r::' . @"
+	execute '!./vendor/bin/phpunit -c tests/phpunit.xml --filter %:t:r::' . @"
 endfunction
