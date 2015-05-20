@@ -1,0 +1,49 @@
+global !p
+import re
+def singular(word):
+	return re.sub(r'(s|es)$', '', word)
+endglobal
+
+snippet dw "do while" b
+do {
+} while (${1:false});
+endsnippet
+
+snippet fi "for in" b
+for (${1:map} as $1Key => $1Val) {
+	$2;
+}
+endsnippet
+
+snippet fo "for own" b
+for (${1:map} as $1Key => $1Val) {
+	if (!{}.hasOwnProperty.call($1, $1Key)) {
+		continue;
+	}
+	$2;
+}
+endsnippet
+
+snippet for "for" b
+for (`!p snip.rv = singular(t[1])`Idx; $1.length; `!p snip.rv = singular(t[1])`Idx++) {
+	`!p snip.rv = singular(t[1])` = ${1:items}[`!p snip.rv = singular(t[1])`Idx];
+	$2;
+}
+endsnippet
+
+snippet wh "while" b
+while (${1:false}) {
+}
+endsnippet
+
+snippet vfor "var for" w
+var `!p snip.rv = singular(t[1])`,
+	`!p snip.rv = singular(t[1])`Idx,
+	${1:items};
+endsnippet
+
+snippet vfi "var for in" w
+var ${1:map},
+	$1Key,
+	$1Val;
+endsnippet
