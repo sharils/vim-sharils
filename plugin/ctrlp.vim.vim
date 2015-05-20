@@ -9,4 +9,3 @@ nmap <LEADER>pt :CtrlPBufTag<CR>
 
 let g:ctrlp_custom_ignore = {'dir': '\v(\.git/|api/test/ve/|lib/json/|lib/braintree-php-2.\d{2}.0/|vendor|bower_components|node_modules/)'}
 let g:ctrlp_extensions = ['tag']
-let g:ctrlp_cmd = 'CtrlPTag'
