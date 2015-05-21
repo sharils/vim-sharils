@@ -1,0 +1,25 @@
+snippet /(?<=})c/ "catch" r
+ catch (e) {
+	${1:throw e;}
+}
+endsnippet
+
+snippet /(?<=})f/ "finally" r
+ finally {
+	$1
+}
+endsnippet
+
+snippet tnc "throw new class" w
+throw new $1($2);$0
+endsnippet
+
+snippet tne "throw new Error" w
+throw new Error($1);
+endsnippet
+
+snippet try "try" w
+try {
+	${VISUAL}$1
+}
+endsnippet
