@@ -2,12 +2,12 @@ snippet th "throw" w
 throw $0
 endsnippet
 
-snippet tn "throw new" w
-throw new $1($2);$0
-endsnippet
-
 snippet tnb "throw new OutOfBoundsException" w
 throw new OutOfBoundsException(${1:string $message, int $code, Exception $previous});$0
+endsnippet
+
+snippet tnc "throw new class" w
+throw new $1($2);$0
 endsnippet
 
 snippet tne "throw new Exception" w
