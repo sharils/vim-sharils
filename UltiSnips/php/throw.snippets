@@ -1,3 +1,15 @@
+snippet /(?<=})c/ "catch" r
+ catch (Exception $e) {
+	${1:throw $e;}
+}
+endsnippet
+
+snippet /(?<=})f/ "finally" r
+ finally {
+	$1
+}
+endsnippet
+
 snippet th "throw" w
 throw $0
 endsnippet
@@ -32,4 +44,10 @@ endsnippet
 
 snippet tnuv "throw new UnexpectedValueException" w
 throw new UnexpectedValueException(${1:string $message, int $code, Exception $previous});$0
+endsnippet
+
+snippet try "try" w
+try {
+	${VISUAL}$1
+}
 endsnippet
