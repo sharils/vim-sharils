@@ -1,13 +1,93 @@
 priority -50
 
-snippet /\$/ "place holder" r
-${${1:1}:${2:false}}
+snippet /\$1/ "${1:false}" r
+\${1:${1:false}}
+endsnippet
+
+snippet /\$2/ "${2:false}" r
+\${2:${1:false}}
+endsnippet
+
+snippet /\$3/ "${3:false}" r
+\${3:${1:false}}
+endsnippet
+
+snippet /\$4/ "${4:false}" r
+\${4:${1:false}}
+endsnippet
+
+snippet /\$5/ "${5:false}" r
+\${5:${1:false}}
+endsnippet
+
+snippet /\$6/ "${6:false}" r
+\${6:${1:false}}
+endsnippet
+
+snippet /\$7/ "${7:false}" r
+\${7:${1:false}}
+endsnippet
+
+snippet /\$8/ "${8:false}" r
+\${8:${1:false}}
+endsnippet
+
+snippet /\$9/ "${9:false}" r
+\${9:${1:false}}
+endsnippet
+
+snippet ${VISUAL "${VISUAL:false}" w
+\${VISUAL:${1:false}
+endsnippet
+
+snippet /(?<!\$)0/ "$0" r
+`!p snip.rv = "$0"`
+endsnippet
+
+snippet /(?<!\$)1/ "$0" r
+`!p snip.rv = "$1"`
+endsnippet
+
+snippet /(?<!\$)2/ "$0" r
+`!p snip.rv = "$2"`
+endsnippet
+
+snippet /(?<!\$)3/ "$0" r
+`!p snip.rv = "$3"`
+endsnippet
+
+snippet /(?<!\$)4/ "$0" r
+`!p snip.rv = "$4"`
+endsnippet
+
+snippet /(?<!\$)5/ "$0" r
+`!p snip.rv = "$5"`
+endsnippet
+
+snippet /(?<!\$)6/ "$0" r
+`!p snip.rv = "$6"`
+endsnippet
+
+snippet /(?<!\$)7/ "$0" r
+`!p snip.rv = "$7"`
+endsnippet
+
+snippet /(?<!\$)8/ "$0" r
+`!p snip.rv = "$8"`
+endsnippet
+
+snippet /(?<!\$)9/ "$0" r
+`!p snip.rv = "$9"`
 endsnippet
 
 snippet s "Snippet definition" w
 `!p snip.rv = "snippet"` ${1:Tab_trigger} "${2:Description}" ${3:w}
 $0
 `!p snip.rv = "endsnippet"`
+endsnippet
+
+snippet v "${VISUAL}" w
+\${VISUAL$1}
 endsnippet
 
 # vim:ft=snippets:
