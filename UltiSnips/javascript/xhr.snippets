@@ -1,0 +1,30 @@
+snippet xhr "" w
+$1 = new XMLHttpRequest();
+${1:xhr}.open("${2:GET}", ${3:location});
+$1.send($4);
+endsnippet
+
+snippet xsh "xhr.setRequestHeader" w
+${1:xhr}.setRequestHeader($2)
+endsnippet
+
+snippet xsc "xhr.onreadystatechange" w
+${1:xhr}.onreadystatechange = function(e) {
+	if (this.readyState !== XMLHttpRequest.DONE) {
+		return;
+	}
+	if (this.status < 100 || 600 <= this.status) {
+		throw new Error("status not in 100 to 600");
+	} else if (500 <= this.status) {
+		${2:throw new Error("TODO 5xx (Server Error)");}
+	} else if (400 <= this.status) {
+		${3:throw new Error("TODO 4xx (Client Error)");}
+	} else if (300 <= this.status) {
+		${4:throw new Error("TODO 3xx (Redirection)");}
+	} else if (200 <= this.status) {
+		${5:throw new Error("TODO 2xx (Successful)");}
+	} else if (100 <= this.status) {
+		${6:throw new Error("TODO 1xx (Informational)");}
+	}
+};
+endsnippet
