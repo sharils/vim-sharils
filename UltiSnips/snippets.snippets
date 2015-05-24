@@ -80,6 +80,18 @@ snippet /(?<!\$)9/ "$9" r
 `!p snip.rv = "$9"`
 endsnippet
 
+snippet b "snippet b" w
+`!p snip.rv = "snippet"` ${1:b} "${2:description}" b
+$3
+`!p snip.rv = "endsnippet"`
+endsnippet
+
+snippet i "snippet i" w
+`!p snip.rv = "snippet"` ${1:i} "${2:description}" i
+$3
+`!p snip.rv = "endsnippet"`
+endsnippet
+
 snippet p "python" w
 \`!p snip.rv = ${1:t[1]}\`
 endsnippet
@@ -92,6 +104,12 @@ endsnippet
 
 snippet v "${VISUAL}" w
 \${VISUAL$1}
+endsnippet
+
+snippet w "snippet w" w
+`!p snip.rv = "snippet"` ${1:i} "${2:description}" w
+$3
+`!p snip.rv = "endsnippet"`
 endsnippet
 
 # vim:ft=snippets:
