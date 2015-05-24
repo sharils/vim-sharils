@@ -136,10 +136,6 @@ snippet amr "array_merge_recursive" w
 array_merge_recursive($1)
 endsnippet
 
-snippet amu "array_multisort" w
-array_multisort($1)
-endsnippet
-
 snippet apa "array_pad" w
 array_pad($1)
 endsnippet
@@ -178,10 +174,6 @@ snippet arr "array_replace_recursive" w
 array_replace_recursive($1)
 endsnippet
 
-snippet ars "arsort" w
-arsort($1)
-endsnippet
-
 snippet arv "array_reverse" w
 array_reverse($1)
 endsnippet
@@ -198,8 +190,56 @@ snippet asl "array_slice" w
 array_slice($1)
 endsnippet
 
+snippet aso "sort" w
+sort($1)
+endsnippet
+
+snippet aso "rsort" w
+rsort($1)
+endsnippet
+
+snippet aso "usort" w
+usort($1)
+endsnippet
+
+snippet aso "ksort" w
+ksort($1)
+endsnippet
+
+snippet aso "krsort" w
+krsort($1)
+endsnippet
+
+snippet aso "uksort" w
+uksort($1)
+endsnippet
+
 snippet aso "asort" w
 asort($1)
+endsnippet
+
+snippet aso "arsort" w
+arsort($1)
+endsnippet
+
+snippet aso "uasort" w
+uasort($1)
+endsnippet
+
+snippet aso "natcasesort" w
+natcasesort($1)
+endsnippet
+
+snippet aso "natsort" w
+natsort($1)
+endsnippet
+
+snippet aso "array_multisort" w
+array_multisort($1)
+endsnippet
+
+snippet aso "shuffle" w
+shuffle($1)
 endsnippet
 
 snippet asp "array_splice" w
@@ -268,22 +308,6 @@ snippet key "key" w
 key($1)
 endsnippet
 
-snippet krs "krsort" w
-krsort($1)
-endsnippet
-
-snippet kso "ksort" w
-ksort($1)
-endsnippet
-
-snippet nac "natcasesort" w
-natcasesort($1)
-endsnippet
-
-snippet nat "natsort" w
-natsort($1)
-endsnippet
-
 snippet nex "next" w
 next($1)
 endsnippet
@@ -300,40 +324,16 @@ snippet res "reset" w
 reset($1)
 endsnippet
 
-snippet rso "rsort" w
-rsort($1)
-endsnippet
-
-snippet shu "shuffle" w
-shuffle($1)
-endsnippet
-
-snippet sor "sort" w
-sort($1)
-endsnippet
-
-snippet uas "uasort" w
-uasort($1)
-endsnippet
-
 snippet uasort( "uasort function" w
 uasort($$1, function ($low, $high) {
 	${2:throw new BadFunctionCallException('TODO');}
 }
 endsnippet
 
-snippet uks "uksort" w
-uksort($1)
-endsnippet
-
 snippet uksort( "uksort function" w
 uksort($$1, function ($low, $high) {
 	${2:throw new BadFunctionCallException('TODO');}
 }
-endsnippet
-
-snippet uso "usort" w
-usort($1)
 endsnippet
 
 snippet usort( "usort function" w
