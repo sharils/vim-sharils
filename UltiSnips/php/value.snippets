@@ -1,0 +1,23 @@
+snippet f "false" w
+false
+endsnippet
+
+snippet n "null" w
+null
+endsnippet
+
+snippet t "true" w
+true
+endsnippet
+
+snippet "" "heredoc" w
+$$1 = <<<${1/./\u$0/g}
+$2
+${1/./\u$0/g};
+endsnippet
+
+snippet '' "nowdoc" w
+$$1 = <<<'${1/./\u$0/g}'
+$2
+${1/./\u$0/g};
+endsnippet
