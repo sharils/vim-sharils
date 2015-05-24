@@ -34,6 +34,10 @@ snippet ams "assert maybe string" w
 assert('$${1} === null || is_string($$1)');
 endsnippet
 
+snippet anf "assert not false" w
+assert('$$1 !== false');
+endsnippet
+
 snippet are "assert resource" w
 assert('is_resource($$1)');
 endsnippet
