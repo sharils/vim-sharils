@@ -164,6 +164,10 @@ snippet ard "array_reduce" w
 array_reduce($1)
 endsnippet
 
+snippet arg "range" w
+range($1)
+endsnippet
+
 snippet array_reduce( "array_reduce function" w
 array_reduce($$1, function ($result, $`!p snip.rv = singular(t[1])`) {
 	${2:throw new BadFunctionCallException('TODO');}
@@ -298,10 +302,6 @@ endsnippet
 
 snippet ina "in_array" w
 in_array($1)
-endsnippet
-
-snippet ran "range" w
-range($1)
 endsnippet
 
 snippet uasort( "uasort function" w
