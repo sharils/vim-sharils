@@ -1,0 +1,343 @@
+global !p
+import re
+def singular(word):
+	return re.sub(r'(s|es)$', '', word)
+endglobal
+
+snippet acb "array_combine" w
+array_combine($1)
+endsnippet
+
+snippet ach "array_chunk" w
+array_chunk($1)
+endsnippet
+
+snippet ack "array_change_key_case" w
+array_change_key_case($1)
+endsnippet
+
+snippet aco "array_column" w
+array_column($1)
+endsnippet
+
+snippet acv "array_count_values" w
+array_count_values($1)
+endsnippet
+
+snippet adi "array_diff" w
+array_diff($1)
+endsnippet
+
+snippet adi "array_udiff" w
+array_udiff($1)
+endsnippet
+
+snippet adi "array_diff_key" w
+array_diff_key($1)
+endsnippet
+
+snippet adi "array_diff_ukey" w
+array_diff_ukey($1)
+endsnippet
+
+snippet adi "array_diff_assoc" w
+array_diff_assoc($1)
+endsnippet
+
+snippet adi "array_udiff_assoc" w
+array_udiff_assoc($1)
+endsnippet
+
+snippet adi "array_diff_uassoc" w
+array_diff_uassoc($1)
+endsnippet
+
+snippet adi "array_udiff_uassoc" w
+array_udiff_uassoc($1)
+endsnippet
+
+snippet afi "array_filter" w
+array_filter($1)
+endsnippet
+
+snippet /(?<=array_filter\()f/ "array_filter function" r
+$$1, function ($`!p snip.rv = singular(t[1])`) {
+	${2:throw new BadFunctionCallException('TODO');}
+}
+endsnippet
+
+snippet afil "array_fill" w
+array_fill($1)
+endsnippet
+
+snippet afk "array_fill_keys" w
+array_fill_keys($1)
+endsnippet
+
+snippet afl "array_flip" w
+array_flip($1)
+endsnippet
+
+snippet ain "array_intersect" w
+array_intersect($1)
+endsnippet
+
+snippet ain "array_uintersect" w
+array_uintersect($1)
+endsnippet
+
+snippet ain "array_intersect_key" w
+array_intersect_key($1)
+endsnippet
+
+snippet ain "array_intersect_ukey" w
+array_intersect_ukey($1)
+endsnippet
+
+snippet ain "array_intersect_assoc" w
+array_intersect_assoc($1)
+endsnippet
+
+snippet ain "array_uintersect_assoc" w
+array_uintersect_assoc($1)
+endsnippet
+
+snippet ain "array_intersect_uassoc" w
+array_intersect_uassoc($1)
+endsnippet
+
+snippet ain "array_uintersect_uassoc" w
+array_uintersect_uassoc($1)
+endsnippet
+
+snippet ake "array_key_exists" w
+array_key_exists('$1', $$2)
+endsnippet
+
+snippet aks "array_keys" w
+array_keys($1)
+endsnippet
+
+snippet ama "array_map" w
+array_map($1)
+endsnippet
+
+snippet /(?<=array_map\()f/ "array_map function" r
+function ($`!p snip.rv = singular(t[1])`) {
+	${2:throw new BadFunctionCallException('TODO');}
+}, $$1
+endsnippet
+
+snippet ame "array_merge" w
+array_merge($1)
+endsnippet
+
+snippet amr "array_merge_recursive" w
+array_merge_recursive($1)
+endsnippet
+
+snippet amu "array_multisort" w
+array_multisort($1)
+endsnippet
+
+snippet apa "array_pad" w
+array_pad($1)
+endsnippet
+
+snippet apo "array_pop" w
+array_pop($1)
+endsnippet
+
+snippet apr "array_product" w
+array_product($1)
+endsnippet
+
+snippet apu "array_push" w
+array_push($1)
+endsnippet
+
+snippet ara "array_rand" w
+array_rand($1)
+endsnippet
+
+snippet ard "array_reduce" w
+array_reduce($1)
+endsnippet
+
+snippet /(?<=array_reduce\()f/ "array_reduce function" r
+$$1, function ($result, $`!p snip.rv = singular(t[1])`) {
+	${2:throw new BadFunctionCallException('TODO');}
+}
+endsnippet
+
+snippet arp "array_replace" w
+array_replace($1)
+endsnippet
+
+snippet arr "array_replace_recursive" w
+array_replace_recursive($1)
+endsnippet
+
+snippet ars "arsort" w
+arsort($1)
+endsnippet
+
+snippet arv "array_reverse" w
+array_reverse($1)
+endsnippet
+
+snippet ase "array_search" w
+array_search($1)
+endsnippet
+
+snippet ash "array_shift" w
+array_shift($1)
+endsnippet
+
+snippet asl "array_slice" w
+array_slice($1)
+endsnippet
+
+snippet aso "asort" w
+asort($1)
+endsnippet
+
+snippet asp "array_splice" w
+array_splice($1)
+endsnippet
+
+snippet asu "array_sum" w
+array_sum($1)
+endsnippet
+
+snippet aun "array_unique" w
+array_unique($1)
+endsnippet
+
+snippet aus "array_unshift" w
+array_unshift($1)
+endsnippet
+
+snippet ava "array_values" w
+array_values($1)
+endsnippet
+
+snippet awa "array_walk" w
+array_walk($1)
+endsnippet
+
+snippet /(?<=array_walk\()f/ "array_walk function" r
+$$1, function (&$`!p snip.rv = singular(t[1])`) {
+	${2:throw new BadFunctionCallException('TODO');}
+}
+endsnippet
+
+snippet awr "array_walk_recursive" w
+array_walk_recursive($1)
+endsnippet
+
+snippet com "compact" w
+compact($1)
+endsnippet
+
+snippet cou "count" w
+count($1)
+endsnippet
+
+snippet cur "current" w
+current($1)
+endsnippet
+
+snippet eac "each" w
+each($1)
+endsnippet
+
+snippet end "end" w
+end($1)
+endsnippet
+
+snippet ext "extract" w
+extract($1)
+endsnippet
+
+snippet ina "in_array" w
+in_array($1)
+endsnippet
+
+snippet key "key" w
+key($1)
+endsnippet
+
+snippet krs "krsort" w
+krsort($1)
+endsnippet
+
+snippet kso "ksort" w
+ksort($1)
+endsnippet
+
+snippet nac "natcasesort" w
+natcasesort($1)
+endsnippet
+
+snippet nat "natsort" w
+natsort($1)
+endsnippet
+
+snippet nex "next" w
+next($1)
+endsnippet
+
+snippet pre "prev" w
+prev($1)
+endsnippet
+
+snippet ran "range" w
+range($1)
+endsnippet
+
+snippet res "reset" w
+reset($1)
+endsnippet
+
+snippet rso "rsort" w
+rsort($1)
+endsnippet
+
+snippet shu "shuffle" w
+shuffle($1)
+endsnippet
+
+snippet sor "sort" w
+sort($1)
+endsnippet
+
+snippet uas "uasort" w
+uasort($1)
+endsnippet
+
+snippet /(?<=uasort\()f/ "uasort function" r
+$$1, function ($low, $high) {
+	${2:throw new BadFunctionCallException('TODO');}
+}
+endsnippet
+
+snippet uks "uksort" w
+uksort($1)
+endsnippet
+
+snippet /(?<=uksort\()f/ "uksort function" r
+$$1, function ($low, $high) {
+	${2:throw new BadFunctionCallException('TODO');}
+}
+endsnippet
+
+snippet uso "usort" w
+usort($1)
+endsnippet
+
+snippet /(?<=usort\()f/ "usort function" r
+$$1, function ($low, $high) {
+	${2:throw new BadFunctionCallException('TODO');}
+}
+endsnippet
