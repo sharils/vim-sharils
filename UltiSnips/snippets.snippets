@@ -80,6 +80,16 @@ snippet /(?<!\$)9/ "$0" r
 `!p snip.rv = "$9"`
 endsnippet
 
+snippet p "python" w
+\`!p snip.rv = ${1:t[1]}\`
+endsnippet
+
+snippet r "snippet r" w
+`!p snip.rv = "snippet"` /${1:Tab_trigger}/ "${2:Description}" r
+$0
+`!p snip.rv = "endsnippet"`
+endsnippet
+
 snippet s "Snippet definition" w
 `!p snip.rv = "snippet"` ${1:Tab_trigger} "${2:Description}" ${3:w}
 $0
