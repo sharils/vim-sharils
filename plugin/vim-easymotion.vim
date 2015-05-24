@@ -1,4 +1,4 @@
-nmap <C-_> <Plug>(easymotion-s2)
+nmap <LEADER>f <Plug>(easymotion-s)
 
 let g:EasyMotion_keys = 'jfkdls;ahgytnburmvie,cow.xpq/z7465839201[-]=\'
 let g:EasyMotion_smartcase = 1
