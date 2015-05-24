@@ -122,8 +122,8 @@ snippet ama "array_map" w
 array_map($1)
 endsnippet
 
-snippet /(?<=array_map\()f/ "array_map function" r
-function ($`!p snip.rv = singular(t[1])`) {
+snippet array_map( "array_map function" w
+array_map(function ($`!p snip.rv = singular(t[1])`) {
 	${2:throw new BadFunctionCallException('TODO');}
 }, $$1
 endsnippet
@@ -164,8 +164,8 @@ snippet ard "array_reduce" w
 array_reduce($1)
 endsnippet
 
-snippet /(?<=array_reduce\()f/ "array_reduce function" r
-$$1, function ($result, $`!p snip.rv = singular(t[1])`) {
+snippet array_reduce( "array_reduce function" w
+array_reduce($$1, function ($result, $`!p snip.rv = singular(t[1])`) {
 	${2:throw new BadFunctionCallException('TODO');}
 }
 endsnippet
@@ -226,8 +226,8 @@ snippet awa "array_walk" w
 array_walk($1)
 endsnippet
 
-snippet /(?<=array_walk\()f/ "array_walk function" r
-$$1, function (&$`!p snip.rv = singular(t[1])`) {
+snippet array_walk( "array_walk function" w
+array_walk($$1, function (&$`!p snip.rv = singular(t[1])`) {
 	${2:throw new BadFunctionCallException('TODO');}
 }
 endsnippet
@@ -316,8 +316,8 @@ snippet uas "uasort" w
 uasort($1)
 endsnippet
 
-snippet /(?<=uasort\()f/ "uasort function" r
-$$1, function ($low, $high) {
+snippet uasort( "uasort function" w
+uasort($$1, function ($low, $high) {
 	${2:throw new BadFunctionCallException('TODO');}
 }
 endsnippet
@@ -326,8 +326,8 @@ snippet uks "uksort" w
 uksort($1)
 endsnippet
 
-snippet /(?<=uksort\()f/ "uksort function" r
-$$1, function ($low, $high) {
+snippet uksort( "uksort function" w
+uksort($$1, function ($low, $high) {
 	${2:throw new BadFunctionCallException('TODO');}
 }
 endsnippet
@@ -336,8 +336,8 @@ snippet uso "usort" w
 usort($1)
 endsnippet
 
-snippet /(?<=usort\()f/ "usort function" r
-$$1, function ($low, $high) {
+snippet usort( "usort function" w
+usort($$1, function ($low, $high) {
 	${2:throw new BadFunctionCallException('TODO');}
 }
 endsnippet
