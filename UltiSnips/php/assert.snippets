@@ -10,14 +10,6 @@ snippet ai "assert int" w
 assert('is_int($$1)');
 endsnippet
 
-snippet are "assert resource" w
-assert('is_resource($$1)');
-endsnippet
-
-snippet as "assert string" w
-assert('is_string($$1)');
-endsnippet
-
 snippet amb "assert maybe bool" w
 assert('$${1} === null || is_bool($$1)');
 endsnippet
@@ -36,4 +28,12 @@ endsnippet
 
 snippet ams "assert maybe string" w
 assert('$${1} === null || is_string($$1)');
+endsnippet
+
+snippet are "assert resource" w
+assert('is_resource($$1)');
+endsnippet
+
+snippet as "assert string" w
+assert('is_string($$1)');
 endsnippet
