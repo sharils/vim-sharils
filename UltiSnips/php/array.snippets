@@ -126,12 +126,6 @@ snippet ama "array_map" w
 array_map($1)
 endsnippet
 
-snippet array_map( "array_map function" w
-array_map(function ($`!p snip.rv = singular(t[1])`) {
-	${2:throw new BadFunctionCallException('TODO');}
-}, $$1
-endsnippet
-
 snippet ame "array_merge" w
 array_merge($1)
 endsnippet
@@ -168,8 +162,20 @@ snippet arg "range" w
 range($1)
 endsnippet
 
+snippet array_map( "array_map function" w
+array_map(function ($`!p snip.rv = singular(t[1])`) {
+	${2:throw new BadFunctionCallException('TODO');}
+}, $$1
+endsnippet
+
 snippet array_reduce( "array_reduce function" w
 array_reduce($$1, function ($result, $`!p snip.rv = singular(t[1])`) {
+	${2:throw new BadFunctionCallException('TODO');}
+}
+endsnippet
+
+snippet array_walk( "array_walk function" w
+array_walk($$1, function (&$`!p snip.rv = singular(t[1])`) {
 	${2:throw new BadFunctionCallException('TODO');}
 }
 endsnippet
@@ -276,12 +282,6 @@ endsnippet
 
 snippet awa "array_walk" w
 array_walk($1)
-endsnippet
-
-snippet array_walk( "array_walk function" w
-array_walk($$1, function (&$`!p snip.rv = singular(t[1])`) {
-	${2:throw new BadFunctionCallException('TODO');}
-}
 endsnippet
 
 snippet awr "array_walk_recursive" w
