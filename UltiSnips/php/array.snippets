@@ -76,12 +76,6 @@ snippet afi "array_filter" w
 array_filter($1)
 endsnippet
 
-snippet /(?<=array_filter\()f/ "array_filter function" r
-$$1, function ($`!p snip.rv = singular(t[1])`) {
-	${2:throw new BadFunctionCallException('TODO');}
-}
-endsnippet
-
 snippet afil "array_fill" w
 array_fill($1)
 endsnippet
@@ -176,6 +170,12 @@ endsnippet
 
 snippet arg "range" w
 range($1)
+endsnippet
+
+snippet array_filter( "array_filter function" w
+array_filter($$1, function ($`!p snip.rv = singular(t[1])`) {
+	${2:throw new BadFunctionCallException('TODO');}
+}
 endsnippet
 
 snippet array_map( "array_map function" w
