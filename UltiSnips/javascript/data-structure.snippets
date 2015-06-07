@@ -13,3 +13,31 @@ set ${1}($1) {
 	${3:throw new Error('TODO');}
 }
 endsnippet
+
+snippet pc "property configurable" b
+configurable: ${1:false}
+endsnippet
+
+snippet pe "property enumerable" b
+enumerable: ${1:false}
+endsnippet
+
+snippet pg "property get" b
+get: function () {
+	${1:throw new Error('TODO');}
+}
+endsnippet
+
+snippet ps "property set" b
+set: function ($1) {
+	${2:throw new Error('TODO');}
+}
+endsnippet
+
+snippet pv "property value" b
+value: ${1:null}
+endsnippet
+
+snippet pw "property writable" b
+writable: ${1:false}
+endsnippet
