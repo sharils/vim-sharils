@@ -1,11 +1,55 @@
 snippet ocr "Object.create" w
-Object.create(${1:object})
+Object.create($1)
 endsnippet
 
-snippet oho "object.hasOwnProperty" w
-${1:object}.hasOwnProperty(${2:v})
+snippet odp "Object.defineProperties" w
+Object.defineProperty($1)
+endsnippet
+
+snippet odps "Object.defineProperties" w
+Object.defineProperties($1)
+endsnippet
+
+snippet ofr "Object.freeze" w
+Object.freeze($1)
+endsnippet
+
+snippet ogp "Object.getPrototypeOf" w
+Object.getPrototypeOf($1)
+endsnippet
+
+snippet ohp "object.hasOwnProperty" w
+${1:object}.hasOwnProperty($2)
+endsnippet
+
+snippet oie "Object.isExtensible" w
+Object.isExtensible($1)
+endsnippet
+
+snippet oif "Object.isFrozen" w
+Object.isFrozen($1)
+endsnippet
+
+snippet ois "Object.isSealed" w
+Object.isSealed($1)
 endsnippet
 
 snippet oke "Object.keys" w
 $1Keys = Object.keys(${1:object});
+endsnippet
+
+snippet opd "Object.getOwnPropertyDescriptor" w
+Object.getOwnPropertyDescriptor($1)
+endsnippet
+
+snippet ope "Object.preventExtensions" w
+Object.preventExtensions($1)
+endsnippet
+
+snippet opn "Object.getOwnPropertyNames" w
+Object.getOwnPropertyNames($1)
+endsnippet
+
+snippet ose "Object.seal" w
+Object.seal($1)
 endsnippet
