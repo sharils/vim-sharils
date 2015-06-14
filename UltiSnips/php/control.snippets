@@ -23,6 +23,12 @@ snippet e "else" "buffer[line-1][column:column+1] == '}'" be
 
 endsnippet
 
+snippet e "php else" "buffer[line-1][column:column+14] == '<?php endif ?>'" be
+<?php else: ?>
+	$1
+
+endsnippet
+
 snippet ei "elseif" "buffer[line-1][column:column+1] == '}'" be
 } elseif (${1:false}) {
 
@@ -61,10 +67,6 @@ snippet ir "if return" b
 if (${1:false}) {
 	return;
 }
-endsnippet
-
-snippet pe "php else" b
-<?php else: ?>
 endsnippet
 
 snippet pif "php if" b
