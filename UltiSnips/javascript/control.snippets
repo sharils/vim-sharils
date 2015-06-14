@@ -17,9 +17,10 @@ default:
 	$1;
 endsnippet
 
-snippet /(?<=})e/ "else" r
- else {
-}
+snippet e "else" "buffer[line-1][column:column+1] == '}'" be
+} else {
+	$1
+
 endsnippet
 
 snippet /(?<=})ei/ "elseif" r
