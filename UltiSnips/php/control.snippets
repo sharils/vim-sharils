@@ -23,9 +23,9 @@ snippet e "else" "buffer[line-1][column:column+1] == '}'" be
 
 endsnippet
 
-snippet /(?<=})ei/ "elseif" r
- elseif (${1:false}) {
-}
+snippet ei "elseif" "buffer[line-1][column:column+1] == '}'" be
+} elseif (${1:false}) {
+
 endsnippet
 
 snippet ibr "if break" b
