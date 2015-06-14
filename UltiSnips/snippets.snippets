@@ -86,9 +86,21 @@ $3
 `!p snip.rv = "endsnippet"`
 endsnippet
 
+snippet be "snippet be" w
+`!p snip.rv = "snippet"` ${1:be} "${2:description}" "${3:expression}" be
+$4
+`!p snip.rv = "endsnippet"`
+endsnippet
+
 snippet i "snippet i" w
 `!p snip.rv = "snippet"` ${1:i} "${2:description}" i
 $3
+`!p snip.rv = "endsnippet"`
+endsnippet
+
+snippet ie "snippet ie" w
+`!p snip.rv = "snippet"` ${1:ie} "${2:description}" "${3:expression}" ie
+$4
 `!p snip.rv = "endsnippet"`
 endsnippet
 
