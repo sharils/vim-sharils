@@ -1,3 +1,27 @@
+snippet chr "chr(): int" w
+chr($1)
+endsnippet
+
+snippet md5 "md5(): string" w
+md5($1)
+endsnippet
+
+snippet md5 "md5_file(): string, false" w
+md5_file($1)
+endsnippet
+
+snippet ord "ord(): str" w
+ord($1)
+endsnippet
+
+snippet sbh "bin2hex(): string" w
+bin2hex($1)
+endsnippet
+
+snippet sbh "hex2bin(): string, false" w
+hex2bin($1)
+endsnippet
+
 snippet scm "strcasecmp(): -1, 0, 1" w
 strcasecmp($1)
 endsnippet
@@ -30,6 +54,30 @@ snippet scm "substr_compare(): -1, 0, 1, false" w
 substr_compare($1)
 endsnippet
 
+snippet scu "convert_uudecode(): string" w
+convert_uudecode($1)
+endsnippet
+
+snippet scu "convert_uuencode(): string" w
+convert_uuencode($1)
+endsnippet
+
+snippet sha1 "sha1(): string" w
+sha1($1)
+endsnippet
+
+snippet sha1 "sha1_file(): string, false" w
+sha1_file($1)
+endsnippet
+
+snippet she "hebrev(): string" w
+hebrev($1)
+endsnippet
+
+snippet she "hebrevc(): string" w
+hebrevc($1)
+endsnippet
+
 snippet sht "get_html_translation_table(): array" w
 get_html_translation_table($1)
 endsnippet
@@ -56,6 +104,10 @@ endsnippet
 
 snippet sht "strip_tags(): string" w
 strip_tags($1)
+endsnippet
+
+snippet sle "strlen(): int" w
+strlen($1)
 endsnippet
 
 snippet slu "lcfirst(): string" w
@@ -126,6 +178,14 @@ snippet spo "strrpos(): int, false" w
 strrpos($1)
 endsnippet
 
+snippet sqp "quoted_printable_decode(): string" w
+quoted_printable_decode($1)
+endsnippet
+
+snippet sqp "quoted_printable_encode(): string" w
+quoted_printable_encode($1)
+endsnippet
+
 snippet sre "str_ireplace(): string, array" w
 str_ireplace($1)
 endsnippet
@@ -134,12 +194,60 @@ snippet sre "str_replace(): string, array" w
 str_replace($1)
 endsnippet
 
+snippet sre "strtr(): string, false, null" w
+strtr($1)
+endsnippet
+
 snippet sre "substr_replace(): string, array" w
 substr_replace($1)
 endsnippet
 
+snippet srv "strrev(): string" w
+strrev($1)
+endsnippet
+
 snippet ssf "sscanf(): array, int, -1" w
 sscanf($1)
+endsnippet
+
+snippet ssl "addcslashes(): string" w
+addcslashes($1)
+endsnippet
+
+snippet ssl "addslashes(): string" w
+addslashes($1)
+endsnippet
+
+snippet ssl "quotemete(): string, false" w
+quotemete($1)
+endsnippet
+
+snippet ssl "stripcslashes(): string" w
+stripcslashes($1)
+endsnippet
+
+snippet ssl "stripslashes(): string" w
+stripslashes($1)
+endsnippet
+
+snippet ssn "strcspn(): int" w
+strcspn($1)
+endsnippet
+
+snippet ssn "strspn(): int" w
+strspn($1)
+endsnippet
+
+snippet ssp "chunk_split(): string" w
+chunk_split($1)
+endsnippet
+
+snippet ssp "str_split(): array, false" w
+str_split($1)
+endsnippet
+
+snippet ssp "wordwrap(): string" w
+wordwrap($1)
 endsnippet
 
 snippet sst "strrchr(): string, false" w
@@ -154,6 +262,18 @@ snippet sst "strstr(): string, false" w
 strstr($1)
 endsnippet
 
+snippet ssu "substr(): string, false" w
+substr($1)
+endsnippet
+
+snippet sto "strtok(): string, false" w
+strtok($1)
+endsnippet
+
+snippet sto "strpbrk(): string, false" w
+strpbrk($1)
+endsnippet
+
 snippet str "ltrim(): string" w
 ltrim($1)
 endsnippet
@@ -166,38 +286,11 @@ snippet str "trim(): string" w
 trim($1)
 endsnippet
 
-#s/.*/snippet sht "&(): string" w&($1)endsnippet
-#convert_uudecode
-#convert_uuencode
-
-#bin2hex
-#hex2bin
-
-#hebrev
-#hebrevc
-
-#chr
-#ord
-
 #localeconv
-#nl_langinfo
-#setlocale
 #money_format
+#nl_langinfo
 #number_format
-
-#md5
-#md5_file
-
-#sha1
-#sha1_file
-
-#quoted_printable_decode
-#quoted_printable_encode
-
-#addcslashes
-#addslashes
-#stripcslashes
-#stripslashes
+#setlocale
 
 #count_chars
 #str_word_count
@@ -209,27 +302,12 @@ endsnippet
 #metaphone
 #soundex
 
-#chunk_split
-#str_split
-#wordwrap
-
-#strtok
-#strpbrk
-
-#strcspn
-#strspn
-
 #convert_cyr_string
 #crc32
 #crypt
 #parse_str
-#quotemeta
 #str_getcsv
 #str_pad
 #str_repeat
 #str_rot13
 #str_shuffle
-#strlen
-#strrev
-#strtr
-#substr
