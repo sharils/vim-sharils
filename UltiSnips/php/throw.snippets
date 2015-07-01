@@ -1,13 +1,13 @@
-snippet /(?<=})c/ "catch" r
- catch (Exception $e) {
-	${1:throw $e;}
-}
+snippet c "catch" "buffer[line-1][column:column+1] == '}'" be
+} catch (${1:Exception} $e) {
+	${2:throw $e;}
+
 endsnippet
 
-snippet /(?<=})f/ "finally" r
- finally {
+snippet f "finally" "buffer[line-1][column:column+1] == '}'" be
+} finally {
 	$1
-}
+
 endsnippet
 
 snippet th "throw" w
