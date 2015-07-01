@@ -54,6 +54,18 @@ snippet scm "substr_compare(): -1, 0, 1, false" w
 substr_compare($1)
 endsnippet
 
+snippet sco "count_chars(): array|string" w
+count_chars($1)
+endsnippet
+
+snippet sco "str_word_count(): array|int" w
+str_word_count($1)
+endsnippet
+
+snippet sco "substr_count(): int" w
+substr_count($1)
+endsnippet
+
 snippet scu "convert_uudecode(): string" w
 convert_uudecode($1)
 endsnippet
@@ -110,6 +122,14 @@ snippet sle "strlen(): int" w
 strlen($1)
 endsnippet
 
+snippet sls "levenshtein(): int, -1" w
+levenshtein($1)
+endsnippet
+
+snippet sls "similar_text(): int" w
+similar_text($1)
+endsnippet
+
 snippet slu "lcfirst(): string" w
 lcfirst($1)
 endsnippet
@@ -128,6 +148,14 @@ endsnippet
 
 snippet slu "strtoupper(): string" w
 strtoupper($1)
+endsnippet
+
+snippet sms "metaphone(): string, false" w
+metaphone($1)
+endsnippet
+
+snippet sms "soundex(): string" w
+soundex($1)
 endsnippet
 
 snippet spf "fprintf(): int" w
@@ -291,16 +319,6 @@ endsnippet
 #nl_langinfo
 #number_format
 #setlocale
-
-#count_chars
-#str_word_count
-#substr_count
-
-#levenshtein
-#similar_text
-
-#metaphone
-#soundex
 
 #convert_cyr_string
 #crc32
