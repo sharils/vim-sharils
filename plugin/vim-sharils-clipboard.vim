@@ -1,0 +1,12 @@
+cnoremap <C-_><C-J> <C-R>+
+cnoremap <C-_><C-K> <C-R>*
+inoremap <C-_><C-J> <C-R>+
+inoremap <C-_><C-k> <C-R>*
+nnoremap <LEADER>j :%y+<CR>
+nnoremap <LEADER>k :%y*<CR>
+nnoremap <C-_><C-J> "+gP
+nnoremap <C-_><C-k> "*gP
+vnoremap <LEADER>j "+y
+vnoremap <LEADER>k o<ESC>
+vnoremap <C-_><C-J> c<C-R>+<C-C>
+vnoremap <C-_><C-k> c<C-R>*<C-C>
