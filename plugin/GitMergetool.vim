@@ -5,7 +5,7 @@ function GitMergetool()
 	silent %yank c
 
 	" Create local
-	silent tabedit /tmp/LOCAL.%:e
+	silent tabedit /tmp/LOCAL.%:t:s?^[^.]*.??
 	silent %delete
 	silent put! c
 	silent normal zR
@@ -18,7 +18,7 @@ function GitMergetool()
 	silent diffthis
 
 	" Create base
-	silent vsplit /tmp/BASE.%:e
+	silent vsplit /tmp/BASE.%:t:s?^[^.]*.??
 	silent %delete
 	silent put! c
 	silent normal zR
@@ -32,7 +32,7 @@ function GitMergetool()
 	silent normal 
 
 	" Create remote
-	silent tabedit /tmp/REMOTE.%:e
+	silent tabedit /tmp/REMOTE.%:t:s?^[^.]*.??
 	silent %delete
 	silent put! c
 	silent normal zR
@@ -45,18 +45,18 @@ function GitMergetool()
 	silent diffthis
 
 	" Open base
-	silent vsplit /tmp/BASE.%:e
+	silent vsplit /tmp/BASE.%:t:s?^[^.]*.??
 	silent 1
 	silent diffthis
 	silent normal 
 
 	" Open local
-	silent tabedit /tmp/LOCAL.%:e
+	silent tabedit /tmp/LOCAL.%:t:s?^[^.]*.??
 	silent 1
 	silent diffthis
 
 	" Open remote
-	silent vsplit /tmp/REMOTE.%:e
+	silent vsplit /tmp/REMOTE.%:t:s?^[^.]*.??
 	silent 1
 	silent diffthis
 	silent normal 
