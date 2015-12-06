@@ -1,18 +1,16 @@
-snippet d "var_dump get_defined_vars debug_backtrace" w
-//*/
+snippet d "dump" w
+
+#/******************************************************************************
 ob_start(); var_dump(
-	//array_reverse(debug_backtrace()),
-	//call_user_func(function () { return func_get_arg(1); }, debug_print_backtrace(), array_reverse(explode(PHP_EOL, trim(ob_get_contents()))), ob_clean()),
-	//get_defined_vars(),
+	#array_reverse(debug_backtrace()),
+	#call_user_func(function () { return func_get_arg(1); }, debug_print_backtrace(), array_reverse(explode(PHP_EOL, trim(ob_get_contents()))), ob_clean()),
+	#get_defined_vars(),
 	${1://},
 	date(DATE_ISO8601)
-); $_ = trim(preg_replace(
-	'/(?<==>|\.\.\.)\n\s*|\n\s*(?=\.\.\.)|(?<={)\n\s*(?=})/',
-	' ',
-	ob_get_clean()
-));
-//$_ = explode(PHP_EOL, $_);
-array_map('trigger_error', (array) $_);
-//exit;
-//*/
+); $_ = (array) preg_replace('/(?<==>|\.\.\.)\n\s*|\n\s*(?=\.\.\.)|(?<={)\n\s*(?=})/', ' ', ob_get_clean());
+#$_ = preg_split("/(?<=\n)/", $_[0]);
+array_map('trigger_error', array_map('trim', $_));
+#array_map('print_r', $_);
+#exit;
+#******************************************************************************/
 endsnippet
