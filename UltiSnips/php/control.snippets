@@ -17,30 +17,30 @@ default:
 	$1
 endsnippet
 
-snippet e "else" "buffer[line-1][column:column+1] == '}'" be
+snippet e "else" "snip.buffer[snip.line-1][snip.column:snip.column+1] == '}'" be
 } else {
 	$1
 
 endsnippet
 
-snippet e "php else" "buffer[line-1][column:column+14] == '<?php endif ?>'" be
+snippet e "php else" "snip.buffer[snip.line-1][snip.column:snip.column+14] == '<?php endif ?>'" be
 <?php else: ?>
 	$1
 
 endsnippet
 
-snippet ei "elseif" "buffer[line-1][column:column+1] == '}'" be
+snippet ei "elseif" "snip.buffer[snip.line-1][snip.column:snip.column+1] == '}'" be
 } elseif (${1:false}) {
 
 endsnippet
 
-snippet ei "php elseif else" "buffer[line-1][column:column+14] == '<?php else: ?>'" be
+snippet ei "php elseif else" "snip.buffer[snip.line-1][snip.column:snip.column+14] == '<?php else: ?>'" be
 <?php elseif (${1:false}): ?>
 	$1
 
 endsnippet
 
-snippet ei "php elseif endif" "buffer[line-1][column:column+14] == '<?php endif ?>'" be
+snippet ei "php elseif endif" "snip.buffer[snip.line-1][snip.column:snip.column+14] == '<?php endif ?>'" be
 <?php elseif (${1:false}): ?>
 	$1
 

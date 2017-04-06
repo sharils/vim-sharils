@@ -17,13 +17,13 @@ default:
 	$1;
 endsnippet
 
-snippet e "else" "buffer[line-1][column:column+1] == '}'" be
+snippet e "else" "snip.buffer[snip.line-1][snip.column:snip.column+1] == '}'" be
 } else {
 	$1
 
 endsnippet
 
-snippet ei "else if" "buffer[line-1][column:column+1] == '}'" be
+snippet ei "else if" "snip.buffer[snip.line-1][snip.column:snip.column+1] == '}'" be
 } else if (${1:false}) {
 
 endsnippet
