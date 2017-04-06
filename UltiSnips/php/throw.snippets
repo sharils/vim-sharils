@@ -1,10 +1,10 @@
-snippet c "catch" "buffer[line-1][column:column+1] == '}'" be
+snippet c "catch" "snip.buffer[snip.line-1][snip.column:snip.column+1] == '}'" be
 } catch (${1:Exception} $e) {
 	${2:throw $e;}
 
 endsnippet
 
-snippet f "finally" "buffer[line-1][column:column+1] == '}'" be
+snippet f "finally" "snip.buffer[snip.line-1][snip.column:snip.column+1] == '}'" be
 } finally {
 	$1
 
