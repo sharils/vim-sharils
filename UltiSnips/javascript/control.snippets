@@ -1,51 +1,51 @@
-snippet ca "case" b
+snippet ca "case" Ab
 case ${1:false}:
 endsnippet
 
-snippet cb "case break" b
+snippet cb "case break" Ab
 case ${1:false}:
 	break;
 endsnippet
 
-snippet cnb "case no break" b
+snippet cnb "case no break" Ab
 case ${1:false}:
 	// no break
 endsnippet
 
-snippet de "default" b
+snippet de "default" Ab
 default:
 	$1;
 endsnippet
 
-snippet e "else" "snip.buffer[snip.line-1][snip.column:snip.column+1] == '}'" be
+snippet e "else" "snip.buffer[snip.line-1][snip.column:snip.column+1] == '}'" Abe
 } else {
 	$1
 
 endsnippet
 
-snippet ei "else if" "snip.buffer[snip.line-1][snip.column:snip.column+1] == '}'" be
+snippet ei "else if" "snip.buffer[snip.line-1][snip.column:snip.column+1] == '}'" Abe
 } else if (${1:false}) {
 
 endsnippet
 
-snippet ibr "if break" b
+snippet ibr "if break" Ab
 if (${1:false}) {
 	break;
 }
 endsnippet
 
-snippet ic "if continue" b
+snippet ic "if continue" Ab
 if (${1:false}) {
 	continue;
 }
 endsnippet
 
-snippet if "if" b
+snippet if "if" Ab
 if (${1:false}) {
 }
 endsnippet
 
-snippet ir "if return" b
+snippet ir "if return" Ab
 if (${1:false}) {
 	return
 }
@@ -55,7 +55,7 @@ snippet re "return" w
 return $1;
 endsnippet
 
-snippet sw "switch" b
+snippet sw "switch" Ab
 switch (${1:false}) {
 }
 endsnippet

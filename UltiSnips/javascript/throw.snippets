@@ -1,24 +1,24 @@
-snippet c "catch" "snip.buffer[snip.line-1][snip.column:snip.column+1] == '}'" be
+snippet c "catch" "snip.buffer[snip.line-1][snip.column:snip.column+1] == '}'" Abe
 } catch (e) {
 	${1:throw e;}
 
 endsnippet
 
-snippet f "finally" "snip.buffer[snip.line-1][snip.column:snip.column+1] == '}'" be
+snippet f "finally" "snip.buffer[snip.line-1][snip.column:snip.column+1] == '}'" Abe
 } finally {
 	$1
 
 endsnippet
 
-snippet tnc "throw new class" w
+snippet tnc "throw new class" Aw
 throw new $1($2);
 endsnippet
 
-snippet tne "throw new Error" w
+snippet tne "throw new Error" Aw
 throw new Error($1);
 endsnippet
 
-snippet try "try" w
+snippet try "try" Aw
 try {
 	${VISUAL}$1
 }

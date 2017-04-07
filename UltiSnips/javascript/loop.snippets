@@ -4,14 +4,14 @@ def singular(word):
 	return re.sub(r'(s|es)$', '', word)
 endglobal
 
-snippet for "for" b
+snippet for "for" Ab
 for (`!p snip.rv = singular(t[1])`Idx; $1.length; `!p snip.rv = singular(t[1])`Idx++) {
 	`!p snip.rv = singular(t[1])` = ${1:items}[`!p snip.rv = singular(t[1])`Idx];
 	$2;
 }
 endsnippet
 
-snippet wh "while" b
+snippet wh "while" Ab
 while (${1:false}) {
 }
 endsnippet
