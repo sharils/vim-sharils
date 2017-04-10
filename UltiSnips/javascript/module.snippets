@@ -1,20 +1,20 @@
-snippet /^e/ "export" r
+snippet /^e/ "export" Ar
 export $0
 endsnippet
 
-snippet /(?<=export )d/ "default" r
+snippet /(?<=export )d/ "default" Ar
 default $0
 endsnippet
 
-snippet /(?<=export default )>/ "=>" r
+snippet /(?<=export default )>/ "=>" Ar
 ($1) => $2;
 endsnippet
 
-snippet /(?<=export default )c/ "class" r
+snippet /(?<=export default )c/ "class" Ar
 class $1 {
 }
 endsnippet
 
-snippet /^i/ "import" r
+snippet /^i/ "import" Ar
 import $1 from '$2';
 endsnippet
