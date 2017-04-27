@@ -22,13 +22,9 @@ if (!Array.isArray($1) || $1.some(`!p snip.rv = singular(t[1])` => !(`!p snip.rv
 }
 endsnippet
 
-snippet aN "assert number array" w
-if (!Array.isArray($1) || $1.some(`!p snip.rv = singular(t[1])` =>
-	typeof `!p snip.rv = singular(t[1])` !== 'number' ||
-	!Number.isFinite(`!p snip.rv = singular(t[1])`) ||
-	Number.isNaN(`!p snip.rv = singular(t[1])`)
-)) {
-	throw new TypeError('$1 should be number array');
+snippet aN "assert finite number array" w
+if (!Array.isArray($1) || $1.some(`!p snip.rv = singular(t[1])` => !Number.isFinite(`!p snip.rv = singular(t[1])`))) {
+	throw new TypeError('$1 should be finite number array');
 }
 endsnippet
 
@@ -69,12 +65,8 @@ if (!(${1} instanceof ${2})) {
 endsnippet
 
 snippet an "assert number" w
-if (
-	typeof ${1} !== 'number' ||
-	!Number.isFinite($1) ||
-	Number.isNaN($1)
-) {
-	throw new TypeError(`!p snip.rv = "\`"`$1 should be number but ${$1}`!p snip.rv = "\`"`);
+if (!Number.isFinite($1)) {
+	throw new TypeError(`!p snip.rv = "\`"`$1 should be finite number but ${$1}`!p snip.rv = "\`"`);
 }
 endsnippet
 
