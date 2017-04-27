@@ -1,27 +1,99 @@
-snippet ib "is boolean" w
-typeof ${1:false} === "boolean"
+global !p
+import re
+def singular(word):
+	return re.sub(r'(s|es)$', '', word)
+endglobal
+
+snippet aB "assert boolean array" w
+if (!Array.isArray($1) || $1.some(`!p snip.rv = singular(t[1])` => `!p snip.rv = singular(t[1])` !== 'boolean')) {
+	throw new TypeError('$1 should be boolean array');
+}
 endsnippet
 
-snippet ifu "is function" w
-typeof ${1:function()\{\}} === "function"
+snippet aF "assert function array" w
+if (!Array.isArray($1) || $1.some(`!p snip.rv = singular(t[1])` => `!p snip.rv = singular(t[1])` !== 'function')) {
+	throw new TypeError('$1 should be function array');
+}
 endsnippet
 
-snippet in "is number" w
-typeof ${1:0} === "number"
+snippet aI "assert instance array" w
+if (!Array.isArray($1) || $1.some(`!p snip.rv = singular(t[1])` => !(`!p snip.rv = singular(t[1])` instanceof ${2})) {
+	throw new TypeError('$1 should be instance $2');
+}
 endsnippet
 
-snippet io "is object" w
-typeof ${1:null} === "object"
+snippet aN "assert number array" w
+if (!Array.isArray($1) || $1.some(`!p snip.rv = singular(t[1])` =>
+	typeof `!p snip.rv = singular(t[1])` !== 'number' ||
+	!Number.isFinite(`!p snip.rv = singular(t[1])`) ||
+	Number.isNaN(`!p snip.rv = singular(t[1])`)
+)) {
+	throw new TypeError('$1 should be number array');
+}
 endsnippet
 
-snippet iof "instanceof" w
-$1 instanceof $2
+snippet aO "assert object array" w
+if (!Array.isArray($1) || $1.some(`!p snip.rv = singular(t[1])` => `!p snip.rv = singular(t[1])` !== 'object' || $1 === null)) {
+	throw new TypeError('$1 should be object array');
+}
 endsnippet
 
-snippet is "is string" w
-typeof ${1:""} === "string"
+snippet aS "assert string array" w
+if (!Array.isArray($1) || $1.some(`!p snip.rv = singular(t[1])` => `!p snip.rv = singular(t[1])` !== 'string')) {
+	throw new TypeError('$1 should be string array');
+}
 endsnippet
 
-snippet iu "is undefined" w
-typeof ${1:undefined} === "undefined"
+snippet aY "assert symbol array" w
+if (!Array.isArray($1) || $1.some(`!p snip.rv = singular(t[1])` => `!p snip.rv = singular(t[1])` !== 'symbol')) {
+	throw new TypeError('$1 should be symbol array');
+}
 endsnippet
+
+snippet ab "assert boolean" w
+if (typeof ${1} !== 'boolean') {
+	throw new TypeError(`!p snip.rv = "\`"`$1 should be boolean but ${$1}`!p snip.rv = "\`"`);
+}
+endsnippet
+
+snippet af "assert function" w
+if (typeof ${1} !== 'function') {
+	throw new TypeError(`!p snip.rv = "\`"`$1 should be function but ${$1}`!p snip.rv = "\`"`);
+}
+endsnippet
+
+snippet ai "assert instance" w
+if (!(${1} instanceof ${2})) {
+	throw new TypeError('$1 should be instance of $2');
+}
+endsnippet
+
+snippet an "assert number" w
+if (
+	typeof ${1} !== 'number' ||
+	!Number.isFinite($1) ||
+	Number.isNaN($1)
+) {
+	throw new TypeError(`!p snip.rv = "\`"`$1 should be number but ${$1}`!p snip.rv = "\`"`);
+}
+endsnippet
+
+snippet ao "assert object" w
+if (typeof ${1} !== 'object' || $1 === null) {
+	throw new TypeError(`!p snip.rv = "\`"`$1 should be object but ${$1}`!p snip.rv = "\`"`);
+}
+endsnippet
+
+snippet as "assert string" w
+if (typeof ${1} !== 'string') {
+	throw new TypeError(`!p snip.rv = "\`"`$1 should be string but ${$1}`!p snip.rv = "\`"`);
+}
+endsnippet
+
+snippet ay "assert symbol" w
+if (typeof ${1} !== 'symbol') {
+	throw new TypeError(`!p snip.rv = "\`"`$1 should be symbol but ${$1}`!p snip.rv = "\`"`);
+}
+endsnippet
+
+

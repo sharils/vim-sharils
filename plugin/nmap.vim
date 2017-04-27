@@ -39,6 +39,7 @@ nmap <LEADER>sw :set wrap!<CR>
 nmap <LEADER>tc :tabclose<CR>
 nmap <LEADER>tm :tabmove<CR>
 nmap <LEADER>tn :tabedit<SPACE>
+nmap <LEADER>t. :tabedit<SPACE><C-R>=expand("%:h")<CR>/
 nmap <LEADER>to :tabonly<CR>
 nmap <LEADER>vh :vertial help<SPACE>
 nmap <LEADER>w= <C-W><C-=>
