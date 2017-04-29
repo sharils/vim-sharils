@@ -13,8 +13,13 @@ snippet </ "<tag>" i
 endsnippet
 
 snippet /(?<=export default )f/ "function" Ar
-function $1($2) {
+function ${1}({
+	${2}
+}) {
 }
+$1.propTypes = {
+	${2/.*?(?=,\n)/$0: PropTypes.any.isRequired/g}
+};
 endsnippet
 
 snippet ren "render" w
