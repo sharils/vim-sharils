@@ -5,6 +5,7 @@ nmap <LEADER><LEADER>wh <C-W><C-H><C-W><C-_><C-W><BAR>
 nmap <LEADER><LEADER>wj <C-W><C-J><C-W><C-_><C-W><BAR>
 nmap <LEADER><LEADER>wk <C-W><C-K><C-W><C-_><C-W><BAR>
 nmap <LEADER><LEADER>wl <C-W><C-L><C-W><C-_><C-W><BAR>
+nmap <LEADER>E :edit!<CR>
 nmap <LEADER>cc :cc<CR>
 nmap <LEADER>cn :cnext<CR>
 nmap <LEADER>cp :cprevious<CR>
