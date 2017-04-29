@@ -1,13 +1,15 @@
-snippet </ "<tag>" Aw
-<$1 />
-endsnippet
-
-snippet <> "<tag>" Aw
+snippet < "<tag>" i
 <${1}>$2</$1>
 endsnippet
 
-snippet /> "<tag>" Aw
+snippet <> "<tag>" Ai
+<${1}>
+	${VISUAL}$2
 </$1>
+endsnippet
+
+snippet </ "<tag>" i
+<${1} />
 endsnippet
 
 snippet /(?<=export default )f/ "function" Ar
