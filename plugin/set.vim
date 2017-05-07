@@ -24,6 +24,3 @@ set softtabstop=4
 set t_Co=256
 set tabstop=4
 set wildmenu
-if &term == "screen"
-	set term=xterm-256color
-endif
