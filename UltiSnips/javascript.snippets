@@ -18,7 +18,7 @@ snippet $ "${var}" i
 ${$1}
 endsnippet
 
-snippet f "false" w
+snippet /(?<!\/)f/ "false" r
 false
 endsnippet
 
@@ -30,10 +30,14 @@ snippet r "return" w
 return $1
 endsnippet
 
-snippet t "true" w
+snippet /(?<!\/)t/ "true" r
 true
 endsnippet
 
 snippet u "undefined" w
 undefined
+endsnippet
+
+snippet /t "// TODO: " b
+// TODO (sharils): $0
 endsnippet
