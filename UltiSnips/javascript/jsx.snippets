@@ -12,13 +12,13 @@ snippet </ "<tag>" i
 <${1} />
 endsnippet
 
-snippet /(?<=export default )f/ "function" Ar
+snippet /(?<=export default )f|(?<=export )f|^f/ "function" Ar
 function ${1}({
 	${2}
 }) {
 }
 $1.propTypes = {
-	${2/.*?(?=,\n)/$0: PropTypes.any.isRequired/g}
+	${2/.*?(?=,)/$0: PropTypes.any.isRequired/g}
 };
 endsnippet
 
