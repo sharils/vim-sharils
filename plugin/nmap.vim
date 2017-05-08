@@ -11,10 +11,10 @@ nmap <LEADER>cn :cnext<CR>
 nmap <LEADER>cp :cprevious<CR>
 nmap <LEADER>cr :crewind<CR>
 nmap <LEADER>cw :cwindow<CR>
-nmap <LEADER>eh :Hexplore<CR>
-nmap <LEADER>et :Texplore<CR>
-nmap <LEADER>ev :Vexplore<CR>
-nmap <LEADER>ex :Explore<CR>
+nmap <LEADER>eh :Hexplore<CR>gggn
+nmap <LEADER>et :Texplore<CR>gggn
+nmap <LEADER>ev :Vexplore<CR>gggn
+nmap <LEADER>ex :Explore<CR>gggn
 nmap <LEADER>g< :silent lgrep --fixed-strings '<<<<<<<' %<CR>zt<C-L>zt
 nmap <LEADER>gC :silent lgrep --fixed-strings 'class <C-R><C-W> ' *<CR><C-L>zt
 nmap <LEADER>gF :silent lgrep --fixed-strings 'function <C-R><C-W>(' *<CR><C-L>zt
