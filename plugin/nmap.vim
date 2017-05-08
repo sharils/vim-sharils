@@ -32,10 +32,10 @@ nmap <LEADER>sn :execute &relativenumber ? "set number" : "set relativenumber"<C
 nmap <LEADER>sp :set paste!<CR>
 nmap <LEADER>ss :set spell!<CR>
 nmap <LEADER>sw :set wrap!<CR>
-nmap <LEADER>tc :tabclose<CR>
-nmap <LEADER>tm :tabmove<CR>
-nmap <LEADER>tn :tabedit<SPACE>
 nmap <LEADER>t. :tabedit<SPACE><C-R>=expand("%:h")<CR>/
+nmap <LEADER>tc :tabclose<CR>
+nmap <LEADER>te :tabedit<SPACE>
+nmap <LEADER>tm :tabmove
 nmap <LEADER>to :tabonly<CR>
 nmap <LEADER>vh :vertial help<SPACE>
 nmap <LEADER>w= <C-W><C-=>
