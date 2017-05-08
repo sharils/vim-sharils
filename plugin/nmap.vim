@@ -19,11 +19,6 @@ nmap <LEADER>g< :silent lgrep --fixed-strings '<<<<<<<' %<CR>zt<C-L>zt
 nmap <LEADER>gC :silent lgrep --fixed-strings 'class <C-R><C-W> ' *<CR><C-L>zt
 nmap <LEADER>gF :silent lgrep --fixed-strings 'function <C-R><C-W>(' *<CR><C-L>zt
 nmap <LEADER>gW :silent lgrep --fixed-strings <C-R><C-W> *<CR><C-L>zt
-nmap <LEADER>ge :silent lgrep --extended-regexp<SPACE>
-nmap <LEADER>gf :silent lgrep --fixed-strings<SPACE>
-nmap <LEADER>gg :silent lgrep --basic-regexp<SPACE>
-nmap <LEADER>gp :silent lgrep --perl-regexp<SPACE>
-nmap <LEADER>gw :silent lgrep --fixed-strings <C-R><C-W> %<CR><C-L>
 nmap <LEADER>ll :ll<CR>
 nmap <LEADER>ln :lnext<CR>
 nmap <LEADER>lp :lprevious<CR>
