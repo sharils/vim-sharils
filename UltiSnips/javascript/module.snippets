@@ -1,3 +1,11 @@
+global !p
+import re
+def transform(match):
+	return match.group(1).upper();
+def pascalCase(package):
+	return re.sub(r'(?:^|[-.])(.)', transform, package)
+endglobal
+
 snippet /^e/ "export" Ar
 export $0
 endsnippet
@@ -16,5 +24,9 @@ class $1 {
 endsnippet
 
 snippet /^i/ "import" r
-import $1 from '$2';
+import ${2:`!p snip.rv = pascalCase(t[1])`} from '$1';
+endsnippet
+
+snippet /^cr/ "const require" r
+const ${2:`!p snip.rv = pascalCase(t[1])`} = require('$1');
 endsnippet
