@@ -16,6 +16,10 @@ snippet /(?<=export default )f|(?<=export )f|^f/ "function" Ar
 function ${1}({
 	${2}
 }) {
+	return (
+		<div>$3
+		</div>
+	);
 }
 $1.propTypes = {
 	${2/.*?(?=,)/$0: PropTypes.any.isRequired/g}
