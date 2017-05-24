@@ -38,6 +38,7 @@ nmap <LEADER>tc :tabclose<CR>
 nmap <LEADER>te :tabedit<SPACE>
 nmap <LEADER>tm :tabmove
 nmap <LEADER>to :tabonly<CR>
+nmap <LEADER>tt :tabedit<SPACE><C-R>=expand("%")<CR><CR><C-O>
 nmap <LEADER>vh :vertial help<SPACE>
 nmap <LEADER>w= <C-W><C-=>
 nmap <LEADER>wc <C-W><C-C>
