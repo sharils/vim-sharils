@@ -36,13 +36,8 @@ nmap <LEADER>t% :tabedit<SPACE><C-R>=expand("%")<CR>
 nmap <LEADER>t. :tabedit<SPACE><C-R>=expand("%:h")<CR>/
 nmap <LEADER>tc :tabclose<CR>
 nmap <LEADER>te :tabedit<SPACE>
-nmap <LEADER>tf :TestFile<CR>
-nmap <LEADER>tl :TestLast<CR>
 nmap <LEADER>tm :tabmove
-nmap <LEADER>tn :TestNearest<CR>
 nmap <LEADER>to :tabonly<CR>
-nmap <LEADER>ts :TestSuite<CR>
-nmap <LEADER>tv :TestVisit<CR>
 nmap <LEADER>vh :vertial help<SPACE>
 nmap <LEADER>w= <C-W><C-=>
 nmap <LEADER>wc <C-W><C-C>
