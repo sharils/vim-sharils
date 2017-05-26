@@ -67,6 +67,13 @@ snippet ptl "PropTypes.element.isRequired" w
 PropTypes.element.isRequired
 endsnippet
 
+snippet ptm "PropTypes.oneOfType([]).isRequired" w
+PropTypes.oneOfType([
+	$1,
+	PropTypes.oneOf([null]),
+]).isRequired
+endsnippet
+
 snippet ptn "PropTypes.number.isRequired" w
 PropTypes.number.isRequired
 endsnippet
