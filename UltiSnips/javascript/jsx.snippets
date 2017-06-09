@@ -12,18 +12,25 @@ snippet /> "<tag>" i
 <${1} />
 endsnippet
 
-snippet /(?<=export default )f|(?<=export )f|^f/ "function" Ar
-function ${1}({
-	${2}
-}) {
-	return (
-		<div>$3
-		</div>
+snippet /(?<=\.)dp/ "defaultProps" r
+defaultProps = {$1
+};
+endsnippet
+
+snippet /(?<=\.)ir/ "isRequired" r
+isRequired
+endsnippet
+
+snippet /(?<=\.)pt/ "propTypes" r
+propTypes = {$1
+};
+endsnippet
+
+snippet fu "function" w
+function ${1}(${2:props}) {
+	return ($3
 	);
 }
-$1.propTypes = {
-	${2/.*?(?=,)/$0: PropTypes.any.isRequired/g}
-};
 endsnippet
 
 snippet ren "render" w
@@ -39,70 +46,63 @@ snippet /^ipt/ "import PropTypes" r
 import PropTypes from 'prop-types';
 endsnippet
 
-snippet pta "PropTypes.array.isRequired" w
-PropTypes.array.isRequired
+snippet pta "PropTypes.array" w
+PropTypes.array
 endsnippet
 
-snippet ptao "PropTypes.arrayOf().isRequired" w
-PropTypes.arrayOf($1).isRequired
+snippet ptao "PropTypes.arrayOf()" w
+PropTypes.arrayOf($1)
 endsnippet
 
-snippet ptb "PropTypes.bool.isRequired" w
-PropTypes.bool.isRequired
+snippet ptb "PropTypes.bool" w
+PropTypes.bool
 endsnippet
 
-snippet ptd "PropTypes.node.isRequired" w
-PropTypes.node.isRequired
+snippet ptd "PropTypes.node" w
+PropTypes.node
 endsnippet
 
-snippet pte "PropTypes.oneOf([]).isRequired" w
-PropTypes.oneOf([$1]).isRequired
+snippet pte "PropTypes.oneOf([])" w
+PropTypes.oneOf([$1])
 endsnippet
 
-snippet ptf "PropTypes.func.isRequired" w
-PropTypes.func.isRequired
+snippet ptf "PropTypes.func" w
+PropTypes.func
 endsnippet
 
-snippet pti "PropTypes.instanceOf().isRequired" w
-PropTypes.instanceOf($1).isRequired
+snippet pti "PropTypes.instanceOf()" w
+PropTypes.instanceOf($1)
 endsnippet
 
-snippet ptl "PropTypes.element.isRequired" w
-PropTypes.element.isRequired
+snippet ptl "PropTypes.element" w
+PropTypes.element
 endsnippet
 
-snippet ptm "PropTypes.oneOfType([]).isRequired" w
-PropTypes.oneOfType([
-	$1,
-	PropTypes.oneOf([null]),
-]).isRequired
+snippet ptn "PropTypes.number" w
+PropTypes.number
 endsnippet
 
-snippet ptn "PropTypes.number.isRequired" w
-PropTypes.number.isRequired
+snippet pto "PropTypes.object" w
+PropTypes.object
 endsnippet
 
-snippet pto "PropTypes.object.isRequired" w
-PropTypes.object.isRequired
+snippet ptoo "PropTypes.objectOf()" w
+PropTypes.objectOf($1)
 endsnippet
 
-snippet ptoo "PropTypes.objectOf().isRequired" w
-PropTypes.objectOf($1).isRequired
-endsnippet
-
-snippet ptp "PropTypes.shape({}).isRequired" w
+snippet ptp "PropTypes.shape({})" w
 PropTypes.shape({$1
-}).isRequired
+})
 endsnippet
 
-snippet pts "PropTypes.string.isRequired" w
-PropTypes.string.isRequired
+snippet pts "PropTypes.string" w
+PropTypes.string
 endsnippet
 
-snippet ptu "PropTypes.oneOfType([]).isRequired" w
-PropTypes.oneOfType([$1]).isRequired
+snippet ptu "PropTypes.oneOfType([])" w
+PropTypes.oneOfType([$1])
 endsnippet
 
-snippet pty "PropTypes.symbol.isRequired" w
-PropTypes.symbol.isRequired
+snippet pty "PropTypes.symbol" w
+PropTypes.symbol
 endsnippet
