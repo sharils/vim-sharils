@@ -5,13 +5,13 @@ def singular(word):
 endglobal
 
 snippet aB "assert boolean array" w
-if (!Array.isArray($1) || $1.some(`!p snip.rv = singular(t[1])` => `!p snip.rv = singular(t[1])` !== 'boolean')) {
+if (!Array.isArray($1) || $1.some(`!p snip.rv = singular(t[1])` => typeof `!p snip.rv = singular(t[1])` !== 'boolean')) {
 	throw new TypeError('$1 should be boolean array');
 }
 endsnippet
 
 snippet aF "assert function array" w
-if (!Array.isArray($1) || $1.some(`!p snip.rv = singular(t[1])` => `!p snip.rv = singular(t[1])` !== 'function')) {
+if (!Array.isArray($1) || $1.some(`!p snip.rv = singular(t[1])` => typeof `!p snip.rv = singular(t[1])` !== 'function')) {
 	throw new TypeError('$1 should be function array');
 }
 endsnippet
@@ -29,19 +29,19 @@ if (!Array.isArray($1) || $1.some(`!p snip.rv = singular(t[1])` => !Number.isFin
 endsnippet
 
 snippet aO "assert object array" w
-if (!Array.isArray($1) || $1.some(`!p snip.rv = singular(t[1])` => `!p snip.rv = singular(t[1])` !== 'object' || $1 === null)) {
+if (!Array.isArray($1) || $1.some(`!p snip.rv = singular(t[1])` => typeof `!p snip.rv = singular(t[1])` !== 'object' || $1 === null)) {
 	throw new TypeError('$1 should be object array');
 }
 endsnippet
 
 snippet aS "assert string array" w
-if (!Array.isArray($1) || $1.some(`!p snip.rv = singular(t[1])` => `!p snip.rv = singular(t[1])` !== 'string')) {
+if (!Array.isArray($1) || $1.some(`!p snip.rv = singular(t[1])` => typeof `!p snip.rv = singular(t[1])` !== 'string')) {
 	throw new TypeError('$1 should be string array');
 }
 endsnippet
 
 snippet aY "assert symbol array" w
-if (!Array.isArray($1) || $1.some(`!p snip.rv = singular(t[1])` => `!p snip.rv = singular(t[1])` !== 'symbol')) {
+if (!Array.isArray($1) || $1.some(`!p snip.rv = singular(t[1])` => typeof `!p snip.rv = singular(t[1])` !== 'symbol')) {
 	throw new TypeError('$1 should be symbol array');
 }
 endsnippet
