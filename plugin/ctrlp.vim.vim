@@ -8,3 +8,4 @@ nmap <LEADER>cu :CtrlPMRU<CR>
 
 let g:ctrlp_custom_ignore = {'dir': '\v(\.git|bower_components|node_modules|vendor)/'}
 let g:ctrlp_extensions = ['tag']
+let g:ctrlp_show_hidden = 1
