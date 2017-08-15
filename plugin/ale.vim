@@ -1,4 +1,4 @@
-nmap <LEADER>cf :ALEFix<CR>
+nmap <LEADER>af :ALEFix<CR>
 
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {}
