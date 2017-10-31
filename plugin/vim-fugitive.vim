@@ -3,8 +3,8 @@ nmap <LEADER>gs :Gstatus<CR>
 nmap <LEADER>gc :Gcommit<CR>
 nmap <LEADER>gC :Gcommit --fixup=<C-R><C-W><CR>
 nmap <LEADER>gl :Gpull<CR>
-nmap <LEADER>gp :Gpush<CR>
-nmap <LEADER>gP :Gpush -f<CR>
+nmap <LEADER>gp :Gpush --set-upstream<CR>
+nmap <LEADER>gP :Gpush --set-upstream --force<CR>
 nmap <LEADER>gf :Gfetch<CR>
 nmap <LEADER>glg :Glgrep<SPACE>
 nmap <LEADER>gll :Gllog<CR>
