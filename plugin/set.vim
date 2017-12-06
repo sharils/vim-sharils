@@ -3,6 +3,7 @@ set background=dark
 set backspace=eol,indent,start
 set colorcolumn=81
 set completeopt-=preview
+set directory=$TMPDIR//
 set encoding=utf-8
 set expandtab
 set foldcolumn=1
