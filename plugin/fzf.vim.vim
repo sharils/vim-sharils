@@ -76,5 +76,8 @@ imap <C-X><C-F> <plug>(fzf-complete-path)
 imap <C-X><C-J> <plug>(fzf-complete-file-ag)
 imap <C-X><C-L> <plug>(fzf-complete-line)
 
+" Replace the default dictionary completion with fzf-based fuzzy completion
+inoremap <expr> <c-x><c-k> fzf#complete('cat /usr/share/dict/words')
+
 " Advanced customization using autoload functions
 inoremap <expr> <C-X><C-K> fzf#vim#complete#word({'left': '15%'})
